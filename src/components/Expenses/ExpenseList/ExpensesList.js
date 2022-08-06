@@ -1,5 +1,5 @@
 import React from 'react'
-import ExpenseItem from './ExpenseItem'
+import ExpenseItem from '../ExpenseItem/ExpenseItem'
 import './ExpensesList.css'
 
 const ExpensesList = (props) => {
@@ -7,7 +7,7 @@ const ExpensesList = (props) => {
     return <h2 className='expenses-list__fallback'>No expenses found.</h2>
   }
   return (
-    <ul>
+    <ul className='expenses-list'>
       {props.data.map((expense) => (
         <ExpenseItem
           key={expense.id}
